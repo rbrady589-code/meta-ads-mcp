@@ -1,0 +1,12 @@
+{
+  "build": {
+    "builder": "NIXPACKS"
+  },
+  "deploy": {
+    "startCommand": "node dist/index.js --http --port $PORT",
+    "restartPolicy": {
+      "type": "ON_FAILURE",
+      "limit": 3
+    }
+  }
+}
